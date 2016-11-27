@@ -1,0 +1,62 @@
+
+<ion-view view-title="register" ng-controller="registerController">
+ 
+    
+    <ion-header-bar align-title="center" class="bar-positive">
+      <div class="buttons">
+        <button class="button" ng-click="goback()">กลับ</button>
+      </div>
+      <h1 class="title">ลงทะเบียนผู้ใช้งาน</h1>
+      
+    </ion-header-bar>
+     <ion-content>
+    
+    <div class="list list-inset">
+        <form name="myForm">
+  <label class="item item-input">
+      <span class="input-label">Username</span>
+    <input type="text"  name="user" ng-model="form.user" required> 
+  </label>
+  <div class="padding">
+  <p ng-show="myForm.user.$error.required"><font color="red">* ชื่อผู้ใช้ต้องไม่เป็นค่าว่าง</font></p>
+  </div>
+  <label class="item item-input">
+      <span class="input-label">password</span>
+    <input type="text" name="password" ng-model="form.password"  ng-minlength="6" required>
+  </label>
+  <div class="padding">
+      <p ng-show="myForm.password.$error.required"><font color="red">* รหัสผ่านต้องไม่เป็นค่าว่าง</font></p>
+       <p ng-show="myForm.password.$error.minlength"><font color="red">* รหัสผ่านต้องมากกว่า 6 ตัว</font></p>
+  </div>
+   <label class="item item-input">
+       <span class="input-label">ชื่อ - นามสกุล</span>
+    <input type="text" name="name" ng-model="form.name" required>
+  </label>
+  <div class="padding">
+     <p ng-show="myForm.name.$error.required"><font color="red">* ชื่อต้องไม่เป็นค่าว่าง</font></p>
+  </div>
+   <label class="item item-input">
+       <span class="input-label">EMAIL</span>
+    <input type="email" name="email" ng-model="form.email" required>
+  </label>
+  <div class="padding">
+      <p ng-show="myForm.email.$error.required"><font color="red">* EMAIL ต้องไม่เป็นค่าว่าง</font></p>
+  </div>
+   <label class="item item-input">
+       <span class="input-label">เบอร์โทรศัพท์</span>
+    <input type="text"   name="tel" ng-model="form.tel" required>
+  </label>
+ิ
+  <div class="padding">
+        
+             <p ng-show="myForm.tel.$error.required"><font color="red">* หมายเลขโทรศัพท์ ต้องไม่เป็นค่าว่าง</font></p>
+           
+        </div>
+  <button class="button button-calm button-full" ng-disabled="myForm.$invalid"  ng-click="registSave(form)">
+    ลงทะเบียน
+  </button>
+        </form>
+</div>
+    
+  </ion-content>
+</ion-view>

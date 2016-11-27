@@ -1,0 +1,37 @@
+<ion-view>
+  <ion-nav-bar>
+    <ion-nav-title>
+      Detail
+    </ion-nav-title>
+
+    <ion-nav-buttons side="left">
+      <button class="button-icon ion-chevron-left" ng-click="btnBack()">Back</button>
+    </ion-nav-buttons>
+
+  </ion-nav-bar>
+  <ion-content>
+    <img src="img/ionic.png" style="margin-left: auto;margin-right: auto;display: block; padding:2em;">
+
+
+    <div class="list">
+      <label class="item item-input item-stacked-label">
+    <span class="input-label">บ้านเลขที่</span>
+    <input type="text" ng-model="form.address">
+  </label>
+      <label class="item item-input item-stacked-label">
+    <span class="input-label">เจ้าบ้าน</span>
+    <input type="text" ng-model="form.Headperson">
+  </label>
+      <button class="button button-full button-positive" ng-click="gpsCall()">เก็บพิกัด</button>
+      <label class="item item-input item-stacked-label">
+    <span class="input-label">Latitude</span>
+    <input type="text" ng-model="form.longitude">
+  </label>
+      <label class="item item-input item-stacked-label">
+    <span class="input-label">Latitude</span>
+    <input type="text"  ng-model="form.latitude">
+  </label>
+    </div>
+    <button class="button button-full" ng-click="btnCall()">OK</button>
+  </ion-content>
+</ion-view>

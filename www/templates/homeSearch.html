@@ -1,0 +1,67 @@
+<ion-view ng-controller="homeSearchController">
+
+  
+  <ion-header-bar align-title="center" class="bar-positive">
+   <div class="buttons">
+      <button class="button" ng-click="btnHome()">กลับ</button>
+    </div>
+    <h1 class="title">หน้าหลัก</h1>
+    
+    <div class="buttons">
+      <button class="button">{{username}}</button>
+    </div>
+  </ion-header-bar>
+  
+  <ion-content>
+
+    
+    <div class="list card">
+    <label class="item item-input item-select">
+    <div class="input-label">
+      ตำบล
+    </div>
+    <select ng-change="tumbonSelect(selectItem)" ng-model="selectItem" >
+      <option value="302301">แก้งสนามนาง</option>
+      
+      <option value="302302">โนนสำราญ</option>
+       
+      
+      <option value="302303">โนนระเวียง</option>
+       <option value="302304">สีสุก</option>
+      
+      <option value="302305">บึงสำโรง</option>
+    </select>
+    </div>
+
+     <div class="list card">
+    <label class="item item-input item-select">
+    <div class="input-label">
+      หมู่บ้าน
+    </div>
+    <select ng-change="villageSelect(selecVillage)" ng-model="selecVillage" >
+     
+     
+      <option ng-repeat="option in villageData" value="{{option.village_code}}">{{option.village_name}}</option>
+      
+    
+    </select>
+    </div>
+
+  
+
+
+    <div class="list card">
+
+        <label class="item item-input">
+    <input type="text" placeholder="บ้านเลขที่" ng-model="query">
+  </label>
+      <a  class="item item-icon-left" ng-click="btnDetail(h)" ng-repeat="h in houseData | filter:query " >
+        <i class="icon ion-home"></i>
+      บ้านเลขที่  {{h.address}} :  เจ้าบ้าน : {{h.head_person}}
+      </a>
+    
+      
+    </div>
+    
+  </ion-content>
+</ion-view>

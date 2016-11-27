@@ -1,0 +1,41 @@
+<ion-view ng-controller="listController">
+
+  
+  <ion-header-bar align-title="center" class="bar-positive">
+    <div class="buttons">
+      <button class="button">{{username}}</button>
+    </div>
+    <h1 class="title">หน้าหลัก</h1>
+    <div class="buttons">
+      <button class="button" ng-click="btnLoggout()">LOGOUT</button>
+    </div>
+  </ion-header-bar>
+  
+  <ion-content>
+
+    
+    <div class="list card">
+      <a href="#/homeSearch" class="item item-icon-left">
+        <i class="icon ion-home"></i>
+        บันทึกตำแหน่งบ้าน
+      </a>
+    
+     
+    
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-person-stalker"></i>
+        สำรวจข้อมูลประชากร
+      </a>
+    
+      <a href="#" class="item item-icon-left">
+        <i class="icon ion-ios-paper"></i>
+        รายงาน
+      </a>
+    </div>
+    
+
+  </ion-content>
+
+
+
+</ion-view>
