@@ -20,7 +20,7 @@ angular.module('starter')
       $http(
         
         {
-          url:'http://ksnhealth.ddns.net/ksn_api/login.php',
+          url:'http://ksnhealth.ddns.net/mra_api/login.php',
           method:'GET',
           params: parm
         }
