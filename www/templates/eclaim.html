@@ -3,17 +3,20 @@
    <div class="buttons">
       <button class="button" ng-click="btnHome()">กลับ</button>
     </div>
-    <h1 class="title">เวชระเบียนที่ยังไม่ได้บันทึก E-CLAIM</h1>
+    <h1 class="title">เวชระเบียนไม่ได้บันทึก E-CLAIM</h1>
     
-    <div class="buttons">
-      <button class="button">{{username}}</button>
+    <div class="buttons button-clear">
+       <span class="badge badge-assertive">{{length}}</span>
     </div>
   </ion-header-bar>
 <ion-content>
 <ion-list>
-  <ion-item>
-    <a class="item" href="#/eclaim">
-    เวชระเบียนที่ยังไม่ได้บันทึก E-CLAIM
+  <ion-item  item-icon-left ng-repeat="d in data">
+    <a class="item">
+   AN : {{d.an}} </br> วันที่จำหน่าย : {{d.dchdate}} </br>
+   สิทธิ : {{d.name}}
+   <span class="badge badge-assertive" ng-show="{{d.ddate}} > 20 ">{{d.ddate}}</span>
+    <span class="badge badge-balanced" ng-show="{{d.ddate}} <= 20 ">{{d.ddate}}</span>
   </a>
 
   </ion-item>

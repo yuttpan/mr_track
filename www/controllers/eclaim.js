@@ -9,8 +9,9 @@ angular.module('starter')
     }
 
 $http.get('http://ksnhealth.ddns.net/mra_api/select_discharge.php').success(function(data){
-
-console.log(data)
+$scope.data = data ;
+$scope.length = data.length ;
+console.log($scope.data)
 });
 
 
