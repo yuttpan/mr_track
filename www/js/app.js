@@ -45,10 +45,15 @@ angular.module('starter', ['ionic','ngCordova'])
       templateUrl:'templates/login.html',
       controller:'loginController'
     })
-    .state('homeSearch',{
-url:'/homeSearch',
-templateUrl:'templates/homeSearch.html',
-controller:'homeSearchController'
+    .state('report',{
+url:'/report',
+templateUrl:'templates/report.html',
+controller:'reportController'
+})
+.state('eclaim',{
+url:'/eclaim',
+templateUrl:'templates/eclaim.html',
+controller:'eclaimController'
 })
  .state('register',{
 url:'/register',
