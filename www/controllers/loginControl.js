@@ -1,6 +1,6 @@
 angular.module('starter')
 
-  .controller('loginController',function ($scope,$http,$state) {
+  .controller('loginController',function ($scope,$http,$state,userService) {
 
     console.log('Login Controller Start.');
 
@@ -31,7 +31,9 @@ angular.module('starter')
              window.localStorage['status'] = response.data.data.status;
              window.localStorage['userid'] = response.data.data.userid;
               window.localStorage['username'] = response.data.data.name;
-console.log(window.localStorage['username']);
+                 userService.setText(response.data.data.name);
+                 
+console.log(userService.getText());
 
             $state.go('list');
           }else{

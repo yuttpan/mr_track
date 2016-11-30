@@ -1,10 +1,19 @@
 
 <ion-view view-title="" ng-controller="sendController">
+  <ion-header-bar align-title="center" class="bar-positive">
+    <div class="buttons">
+      <button class="button" ng-click="btnHome()">กลับ</button>
+    </div>
+    <h1 class="title">หน้าหลัก</h1>
+    <div class="buttons">
+      <button class="button" >{{username}}</button>
+    </div>
+  </ion-header-bar>
   <ion-content>
-   <div class="list">
+   <div class="list list-inset">
   <label class="item item-input">
     <span class="input-label">Username</span>
-    <input type="text">
+    <input type="text" ng-model="username">
   </label>
   <label class="item item-input">
     <span class="input-label">Password</span>
