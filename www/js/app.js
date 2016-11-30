@@ -60,6 +60,11 @@ url:'/register',
 templateUrl:'templates/register.html',
 controller:'registerController'
 })
+.state('send',{
+url:'/send',
+templateUrl:'templates/send.html',
+controller:'sendController'
+})
 
   $urlRouterProvider.otherwise('/login')
 

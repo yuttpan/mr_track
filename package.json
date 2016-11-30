@@ -1,7 +1,7 @@
 {
-  "name": "ksn_servey",
+  "name": "mr_track",
   "version": "1.1.1",
-  "description": "Ksn_servey: An Ionic project",
+  "description": "mr_track: An Ionic project",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^2.0.4",
