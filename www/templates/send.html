@@ -1,4 +1,3 @@
-
 <ion-view view-title="" ng-controller="sendController">
   <ion-header-bar align-title="center" class="bar-positive">
     <div class="buttons">
@@ -6,30 +5,38 @@
     </div>
     <h1 class="title">หน้าหลัก</h1>
     <div class="buttons">
-      <button class="button" >{{username}}</button>
+      <button class="button">{{user}}</button>
     </div>
   </ion-header-bar>
   <ion-content>
-   <div class="list list-inset">
-  <label class="item item-input">
-    <span class="input-label">Username</span>
-    <input type="text" ng-model="username">
+    <div class="list list-inset">
+      <label class="item item-input">
+    <span class="input-label">ผู้ส่ง</span>
+    <input type="text" ng-model="form.user">
   </label>
-  <label class="item item-input">
-    <span class="input-label">Password</span>
-    <input type="password">
+      <label class="item item-input">
+    <span class="input-label">วันที่ส่ง</span>
+    <input type="date" ng-model="form.date">
   </label>
-   <label class="item item-input">
+
+      <label class="item item-input">
     <span class="input-label">AN</span>
-    <input type="text" ng-model="an_text">
+    <input type="text" ng-model="form.an_text">
     
        
   </label>
-  <button id="startScan" class="button button-positive" ng-click="scan()">
+      <button id="startScan" class="button button-full button-positive" ng-click="scan()">
             Scan
         </button>
-</div>
-    
+
+      <button id="send" class="button button-full button-balanced" ng-click="send(form)">
+            บันทึก
+        </button>
+      <button id="cancle" class="button button-full button-assertive" ng-click="cancle()">
+            ยกเลิก
+        </button>
+    </div>
+    </div>
+
   </ion-content>
 </ion-view>
-
