@@ -18,7 +18,41 @@ angular.module('starter')
 
 
  $scope.send = function(data) {
-	 console.log(data)
+	  var parm = {
+
+'var_user' : $scope.form.user,
+'var_an' : $scope.form.an_text,
+'var_action' : "S"
+//'var_date' : $scope.form.date
+
+    }
+   console.log(parm)
+ $http(
+        
+        {
+          url:'http://ksnhealth.ddns.net/mra_api/send.php',
+          method:'GET',
+          params: parm
+        }
+      ).then(function(response){
+          console.log(response);
+        // console.log(response.data.status);
+          if(response.data.status == 'success'){
+            
+alert('บันทึกข้อมูลสำเร็จ');
+         $scope.form.an_text = "" ;
+          }else{
+            alert('ไม่สามารถบันทึกข้อมูลได้');
+ 
+   
+          }
+
+        },function(error){
+          
+        
+        });
+    
+
  }
 
   $scope.user = window.localStorage['username'] ;
