@@ -65,6 +65,16 @@ url:'/send',
 templateUrl:'templates/send.html',
 controller:'sendController'
 })
+.state('recive',{
+url:'/recive',
+templateUrl:'templates/recive.html',
+controller:'reciveController'
+})
+.state('log',{
+      url:'/log',
+      templateUrl:'templates/log.html',
+      controller:'logController'
+    })
 
   $urlRouterProvider.otherwise('/login')
 

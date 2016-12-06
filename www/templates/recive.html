@@ -1,9 +1,9 @@
-<ion-view view-title="" ng-controller="sendController">
+<ion-view view-title="" ng-controller="reciveController">
   <ion-header-bar align-title="center" class="bar-positive">
     <div class="buttons">
       <button class="button" ng-click="btnHome()">กลับ</button>
     </div>
-    <h1 class="title">บันทึกส่งเวชระเบียน</h1>
+    <h1 class="title">บันทึกรับเวชระเบียน</h1>
     <div class="buttons">
       <button class="button">{{user}}</button>
     </div>
@@ -29,7 +29,7 @@
             Scan
         </button>
 
-      <button id="send" class="button button-full button-balanced" ng-click="send(form)">
+      <button id="send" class="button button-full button-balanced" ng-click="rec(form)">
             บันทึก
         </button>
       <button id="cancle" class="button button-full button-assertive" ng-click="cancle()">
